@@ -27,7 +27,7 @@ export default function App() {
 
   // === PENGATURAN WHATSAPP ===
   // GANTI DENGAN NOMOR WA ASLI ANDA (Gunakan 62, jangan 0 di depan)
-  const noWA = "6281234567890"; 
+  const noWA = "6281392150129"; 
   
   // Link WhatsApp yang sudah dikonversi (spasi jadi %20, koma jadi %2C, plus jadi %2B, seru jadi %21)
   const linkWABundling = `https://wa.me/${noWA}?text=Halo%20Laris%20Manis%2088%20TUP%2C%20saya%20mau%20pesan%20paket%20promo%20bundling%20es%20ubi%20ungu%20%2B%20gyoza%21`;
@@ -368,7 +368,7 @@ export default function App() {
                 <li className="flex items-center gap-3">
                   <MessageCircle size={18} className="text-[#25D366] shrink-0" />
                   {/* JANGAN LUPA UBAH NOMOR DI SINI JUGA JIKA DIBUTUHKAN */}
-                  <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">+62 812-3456-7890</a>
+                  <a href="https://wa.me/6281392150129" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">+62 812-3456-7890</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <InstagramIcon size={18} className="text-[#F0C030] shrink-0" />
