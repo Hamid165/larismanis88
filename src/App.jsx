@@ -27,12 +27,12 @@ export default function App() {
 
   // === PENGATURAN WHATSAPP ===
   // GANTI DENGAN NOMOR WA ASLI ANDA (Gunakan 62, jangan 0 di depan)
-  const noWA = "6281392150129"; 
+  const noWA = "6281330565790"; 
   
   // Link WhatsApp yang sudah dikonversi (spasi jadi %20, koma jadi %2C, plus jadi %2B, seru jadi %21)
-  const linkWABundling = `https://wa.me/${noWA}?text=Halo%20Laris%20Manis%2088%20TUP%2C%20saya%20mau%20pesan%20paket%20promo%20bundling%20es%20ubi%20ungu%20%2B%20gyoza%21`;
   const linkWAUbiUngu = `https://wa.me/${noWA}?text=Halo%20Laris%20Manis%2088%20TUP%2C%20saya%20mau%20pesan%20es%20ubi%20ungu%20nya%21`;
   const linkWAGyoza = `https://wa.me/${noWA}?text=Halo%20Laris%20Manis%2088%20TUP%2C%20saya%20mau%20pesan%20gyoza%20nya%21`;
+  const linkWAPesan = `https://wa.me/${noWA}?text=Halo%20Laris%20Manis%2088%20TUP%2C%20saya%20mau%20pesan%21`;
 
   // Efek untuk mendeteksi scroll agar navbar menjadi transparan/solid
   useEffect(() => {
@@ -145,10 +145,9 @@ export default function App() {
 
               {/* Badge Harga Spesial */}
               <div className="absolute -top-4 -left-2 sm:-top-6 sm:-left-4 bg-white px-3 sm:px-5 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl border border-slate-100 flex flex-col gap-0.5 sm:gap-1 transform hover:-translate-y-1 sm:hover:-translate-y-2 transition-transform duration-300 z-20">
-                <p className="text-[10px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider">Promo Bundling</p>
+                <p className="text-[10px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider">Menu Favorit</p>
                 <div className="flex items-center gap-1 sm:gap-2">
-                   <span className="line-through text-slate-400 text-xs sm:text-sm">Rp 26.000</span>
-                   <span className="font-black text-lg sm:text-2xl text-[#993895]">Rp 23.000</span>
+                   <span className="font-black text-lg sm:text-2xl text-[#993895]">Lezat & Segar</span>
                 </div>
               </div>
 
@@ -209,40 +208,8 @@ export default function App() {
             <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">Sajian sempurna untuk menemani waktu santai, kerja, atau kumpul bareng teman-teman.</p>
           </div>
 
-          {/* Grid diperlebar menjadi 3 kolom agar muat semua */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
-            
-            {/* NEW: Produk 1 - Paket Bundling */}
-            {/* Menghapus transform lg:-translate-y-4 agar sejajar dengan yang lain */}
-            <div className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-900/5 group border border-slate-100 hover:border-[#993895]/50 transition-colors flex flex-col h-full">
-              <div className="relative h-56 sm:h-64 overflow-hidden bg-slate-200 shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent z-10 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <img 
-                  src="/bundling.jpeg" 
-                  alt="Paket Bundling" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 scale-125"
-                />
-                <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-[#993895] to-[#F0C030] px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-full font-bold text-white text-xs sm:text-sm shadow-md">
-                  Best Deal (Hemat 3k)
-                </div>
-              </div>
-              <div className="p-6 sm:p-8 flex flex-col flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-slate-900">Paket Bundling Promo</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-6 flex-grow">
-                  Kombinasi juara! Es Ubi Ungu yang manis dan super creamy bersanding dengan 4 pcs Gyoza Ayam yang gurih dan renyah. Beli paketan dijamin lebih hemat dan kenyang pol!
-                </p>
-                <div className="mt-auto pt-5 sm:pt-6 border-t border-slate-100 flex items-end justify-between">
-                  <div className="flex flex-col gap-0.5 sm:gap-1">
-                    <span className="line-through text-slate-400 text-xs sm:text-sm font-medium">Rp 26.000</span>
-                    <span className="text-2xl sm:text-3xl font-black text-[#993895] leading-none">Rp 23.000</span>
-                  </div>
-                  {/* LINK WA BUNDLING */}
-                  <a href={linkWABundling} target="_blank" rel="noreferrer" className="text-white font-bold text-sm sm:text-base hover:bg-[#802d7c] flex items-center gap-1 group/btn bg-[#993895] px-4 sm:px-5 py-2.5 rounded-full transition-all mb-1 shadow-md">
-                    Pesan <ChevronRight size={16} className="transform group-hover/btn:translate-x-1 sm:w-[18px]" />
-                  </a>
-                </div>
-              </div>
-            </div>
+          {/* Grid Menu */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-4xl mx-auto">
 
             {/* Produk 2: Es Ubi Ungu */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-[#993895]/5 group border border-slate-100 hover:border-[#993895]/30 transition-colors flex flex-col h-full">
@@ -261,7 +228,6 @@ export default function App() {
                 </p>
                 <div className="mt-auto pt-5 sm:pt-6 border-t border-slate-100 flex items-end justify-between">
                   <div className="flex flex-col gap-0.5 sm:gap-1">
-                    <span className="line-through text-slate-400 text-xs sm:text-sm font-medium">Rp 10.000</span>
                     <span className="text-2xl sm:text-3xl font-black text-[#993895] leading-none">Rp 8.000</span>
                   </div>
                   {/* LINK WA UBI UNGU */}
@@ -289,8 +255,7 @@ export default function App() {
                 </p>
                 <div className="mt-auto pt-5 sm:pt-6 border-t border-slate-100 flex items-end justify-between">
                   <div className="flex flex-col gap-0.5 sm:gap-1">
-                    <span className="line-through text-slate-400 text-xs sm:text-sm font-medium">Rp 16.000</span>
-                    <span className="text-2xl sm:text-3xl font-black text-[#d4a015] leading-none">Rp 15.000</span>
+                    <span className="text-2xl sm:text-3xl font-black text-[#d4a015] leading-none">Rp 10.000</span>
                   </div>
                   {/* LINK WA GYOZA */}
                   <a href={linkWAGyoza} target="_blank" rel="noreferrer" className="text-[#d4a015] font-bold text-sm sm:text-base hover:bg-[#F0C030]/20 flex items-center gap-1 group/btn bg-[#F0C030]/10 px-3 sm:px-4 py-2 rounded-full transition-all mb-1">
@@ -317,7 +282,7 @@ export default function App() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <a 
-              href={linkWABundling} 
+              href={linkWAPesan} 
               target="_blank" 
               rel="noreferrer"
               className="bg-[#25D366] text-white w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#1ebd5a] transition-all shadow-lg hover:shadow-[#25D366]/40 flex items-center justify-center gap-3 transform hover:-translate-y-1"
@@ -368,7 +333,7 @@ export default function App() {
                 <li className="flex items-center gap-3">
                   <MessageCircle size={18} className="text-[#25D366] shrink-0" />
                   {/* JANGAN LUPA UBAH NOMOR DI SINI JUGA JIKA DIBUTUHKAN */}
-                  <a href="https://wa.me/6281392150129" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">+62 812-3456-7890</a>
+                  <a href="https://wa.me/6281330565790" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">+62 813-3056-5790</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <InstagramIcon size={18} className="text-[#F0C030] shrink-0" />
